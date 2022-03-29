@@ -12,18 +12,16 @@ sudo rm -rf /usr/local/mysql/data
 sudo rm -rf /lib/systemd/system/mysql.service
 sudo rm -rf /etc/my.cnf
 
-# create mysql.service
+# copy configuration file
 sudo cp ./mysql.service /usr/lib/systemd/system/mysql.service
+sudo cp ./mysql.cnf /etc/my.cnf
 
 #port allow
 sudo apt install ufw
 sudo ufw allow mysql
 
 # library install
-sudo apt install libncurses5 -y
-
-# mysql configuration
-sudo cp ./mysql.cnf /etc/my.cnf
+sudo apt install libncurses5 -y 
 
 # group & user add
 sudo groupadd mysql
