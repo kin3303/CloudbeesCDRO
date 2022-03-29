@@ -43,6 +43,8 @@
 #### Step 5 > CD 서버 메모리 사용 설정
 
 ```console
-   $ cd /opt/cloudbees/sda/bin
+   $  cd /opt/cloudbees/sda/bin
    $ ./ecconfigure --serverInitMemory 20 --serverMaxMemory 60
+   $ ./ecconfigure --agentInitMemory 10 --agentInitMemory 10
+   $ ./ecconfigure --repositoryInitMemory 10 --repositoryInitMemory 20
 ```
