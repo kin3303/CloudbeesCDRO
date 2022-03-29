@@ -1,5 +1,7 @@
 
-## Step 1 > 소스 다운로드
+## DB 서버 설정
+
+### Step 1 > 소스 다운로드
 
 ```console
 
@@ -9,7 +11,7 @@
 ```
 
 
-## Step 2 > DB 설치
+### Step 2 > DB 설치
 
 ```console
    $ cd data/mysql
@@ -18,7 +20,7 @@
    $ systemctl status mysql
 ```
 
-## Step 3 > DB 설정
+### Step 3 > DB 설정
 
 ```console
    $ /usr/local/mysql/bin/mysql -uroot -p 
