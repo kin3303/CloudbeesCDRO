@@ -1,9 +1,4 @@
-
-1. 설치
-2. DB Configuration
-3. License Import
  
-
 ### Cloudbees CD 서버 설치 및 설정
 
 - Cloudbees CD 서버 설치 및 설정을 아래와 같이 진행한다.
@@ -40,12 +35,12 @@
   Password : password!@#
 ```
 
-#### Step 4 > License 임포트
+#### Step 4 > CD 서버에 License 임포트
 
 - Administration > License 로 이동하여 설정
 
 
-#### Step 5 > Server 메모리 설정
+#### Step 5 > CD 서버 메모리 사용 설정
 
 ```console
    $ cd /opt/cloudbees/sda/bin
