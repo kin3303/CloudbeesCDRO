@@ -34,6 +34,6 @@
    > GRANT ALL PRIVILEGES ON ecdb.* TO 'ecuser'@'%';
    > GRANT ALL PRIVILEGES ON ecdb_upgrade.* TO 'ecuser'@'%';
    > FLUSH PRIVILEGES;
-   > exit
+   > exit;
 ```
 
