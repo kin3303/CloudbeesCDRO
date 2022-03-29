@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #cleaning
 sudo apt update
 sudo service mysql stop
@@ -15,7 +14,7 @@ sudo rm -rf /lib/systemd/system/mysql.service
 # create mysql.service
 sudo cp ./mysql.service /usr/lib/systemd/system/mysql.service
 
-#port
+#port allow
 sudo apt install ufw
 sudo ufw allow mysql
 
@@ -51,16 +50,14 @@ sudo chmod 750 mysql-files
 
 # mysql --initialize : installing
 sudo bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
-#ls >> /res2.txt
 
 # create RSA files
 sudo bin/mysql_ssl_rsa_setup
 
+# service register and start
 sudo systemctl daemon-reload
-
-
 sudo service mysql start
 sudo systemctl enable mysql
 
 # mysql start & access
-#sudo bin/mysqld_safe --user=mysql & sudo bin/mysql -uroot -p
+#sudo /usr/local/mysql/bin/mysql -uroot -p
