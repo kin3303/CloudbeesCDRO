@@ -43,3 +43,11 @@
 #### Step 4 > License 임포트
 
 - Administration > License 로 이동하여 설정
+
+
+#### Step 5 > Server 메모리 설정
+
+```console
+   $ cd /opt/cloudbees/sda/bin
+   $ ./ecconfigure --serverInitMemory 30 --serverMaxMemory 70
+```
