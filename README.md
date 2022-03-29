@@ -16,9 +16,10 @@
 #### Step 2 > DB 설치
 
 ```console
+   $ sudo su
    $ cd data/mysql
    $ chmod 777 install_mysql.sh
-   $ sudo ./install_mysql.sh 
+   $ ./install_mysql.sh 
    $ systemctl status mysql
 ```
 
