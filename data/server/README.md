@@ -20,6 +20,10 @@
    $ cd data/server
    $ chmod 777 install_cd_server.sh
    $ ./install_cd_server.sh
+   
+   # SampleProject 설치를 원하는 경우는 아래 커맨드도 같이 실행
+   $ chmod 777 import_sample_project.sh
+   $ ./import_sample_project.sh
 ```
 
 #### Step 3 > CD 서버에 DB 설정
