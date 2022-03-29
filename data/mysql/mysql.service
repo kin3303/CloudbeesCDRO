@@ -1,0 +1,19 @@
+[Unit]
+Description=MySQL Community Server
+After=network.target
+After=syslog.target
+
+[Install]
+WantedBy=multi-user.target
+Alias=mysql.service
+
+[Service]
+user=mysql
+group=mysql
+
+# Start main service
+ExecStart=/usr/local/mysql/bin/mysqld_safe --user=mysql
+
+# Give up if ping dont get an answer
+TimeoutSec=300
+PrivateTmp=false
