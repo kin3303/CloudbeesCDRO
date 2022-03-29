@@ -10,6 +10,7 @@ sudo apt-get autoclean
 sudo apt-get remove --purge mysql* 
 sudo rm -rf /usr/local/mysql/data
 sudo rm -rf /lib/systemd/system/mysql.service
+sudo rm -rf /etc/my.cnf
 
 # create mysql.service
 sudo cp ./mysql.service /usr/lib/systemd/system/mysql.service
@@ -21,7 +22,7 @@ sudo ufw allow mysql
 # library install
 sudo apt install libncurses5 -y
 
-sudo rm -rf /etc/my.cnf
+# mysql configuration
 sudo cp ./mysql.cnf /etc/my.cnf
 
 # group & user add
@@ -46,7 +47,6 @@ cd /usr/local/mysql
 sudo mkdir mysql-files sudo 
 sudo chown mysql:mysql mysql-files
 sudo chmod 750 mysql-files
-
 
 # mysql --initialize : installing
 sudo bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
