@@ -40,7 +40,7 @@
 - Administration > License 로 이동하여 설정
 
 
-#### Step 5 > CD 서버 메모리 사용 설정
+#### Step 5 > 서비스 메모리 사용 설정
 
 ```console
    $  cd /opt/cloudbees/sda/bin
