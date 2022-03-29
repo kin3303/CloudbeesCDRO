@@ -7,8 +7,8 @@
 
 ```console
 
-   $ git clone https://github.com/kin3303/DENSO
-   $ cd DENSO
+   $ git clone https://github.com/kin3303/CloudbeesCDRO
+   $ cd CloudbeesCDRO
    $ git checkout master
 ```
 
