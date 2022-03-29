@@ -1,3 +1,5 @@
 
-
-https://downloads.cloudbees.com/cloudbees-cd/
+1. 설치
+2. DB Configuration
+3. License Import
+ 
