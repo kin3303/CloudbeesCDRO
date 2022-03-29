@@ -7,8 +7,8 @@
 
 ```console
 
-   $ git clone https://github.com/kin3303/DENSO
-   $ cd DENSO
+   $ git clone https://github.com/kin3303/CloudbeesCDRO
+   $ cd CloudbeesCDRO
    $ git checkout master
 ```
 
@@ -44,5 +44,5 @@
 
 ```console
    $ cd /opt/cloudbees/sda/bin
-   $ ./ecconfigure --serverInitMemory 30 --serverMaxMemory 70
+   $ ./ecconfigure --serverInitMemory 20 --serverMaxMemory 60
 ```
