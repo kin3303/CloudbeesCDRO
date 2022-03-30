@@ -52,11 +52,11 @@ chmod +x ./${flowInstaller}
   --installAgent \
   --remoteServer "${remoteServer}" \
   --remoteServerUser "${userAccount}" \
-  --remoteServerPassword "${userPass}"
+  --remoteServerPassword "${userPass}" \
   --unixAgentGroup  "${agentUser}" \
   --unixAgentUser  "${agentGroup}" \
   --agentLocalPort "6800" \
-  --agentPort "7800" \
+  --agentPort "7800"
 
 rm -rf ${flowInstaller}
 
