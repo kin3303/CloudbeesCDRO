@@ -8,6 +8,11 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
+sysctl -w vm.max_map_count=262144 
+sysctl -w fs.file-max=65536
+ulimit -n 65536
+ulimit -u 4096
+
 sudo apt update
 sudo apt install net-tools
 
