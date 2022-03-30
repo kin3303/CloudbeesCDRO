@@ -37,3 +37,11 @@
    > exit;
 ```
 
+#### Step 3 > DB 데일리 백업
+
+```console
+   $ sudo su
+   $ cd data/mysql
+   $ chmod 777 bkup_mysql.sh
+   $ ./bkup_mysql.sh
+```
