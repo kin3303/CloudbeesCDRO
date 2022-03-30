@@ -11,7 +11,7 @@
   $ apt update
   $ apt upgrade
   $ apt install certbot python3-certbot-apache
-  $ certbot certonly --apache -d cbcd.idtplateer.com
+  $ certbot certonly --apache -d [도메인명 ex> cbcd.idtplateer.com]
   $ systemctl stop apache2
   $  vi /opt/cloudbees/sda/apache/conf/ssl.conf
        SSLCertificateFile "/etc/letsencrypt/live/cbcd.idtplateer.com/cert.pem"
