@@ -37,7 +37,7 @@
    > exit;
 ```
 
-#### Step 3 > DB 데일리 백업
+#### Step 4 > DB 데일리 백업
 
 ```console
    $ sudo su
