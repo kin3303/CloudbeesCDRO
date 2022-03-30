@@ -1,5 +1,5 @@
 
-## Certbot 을 사용하는 경우
+## Let's Encrypt(Certbot) 인증서 설치
 
 아래와 같이 인증서를 설치할 수 있다.
 
