@@ -11,4 +11,5 @@
 1. DB 서버 설치 및 설정 > data/mysql 참조
 2. Cloudbees CD web,repo,server 설치 및 설정 > data/server 참조
 3. Cloudbees CD insight 설치 및 설정 > data/insight 참조
+4. Cloudbees CD agent 설치 및 설정 > date/agent 참조
 ```
