@@ -1,0 +1,14 @@
+[mysql]
+host=localhost
+user=root
+password='password!@#'
+
+[mysqldump]
+host=localhost
+user=root
+password='password!@#'
+force
+opt
+routines
+triggers
+max_allowed_packet=250M
