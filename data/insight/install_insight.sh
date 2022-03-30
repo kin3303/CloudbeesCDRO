@@ -79,7 +79,9 @@ chmod +x ./${insightInstaller}
   --remoteServerPassword "changeme" \
   --remoteServerUser "admin" \
   --elasticsearchDataDirectory "/usr/share/elasticsearch/data"
-	
+
+rm -rf ${insightInstaller}
+
 if [[ "${?}" -ne 0 ]]
 then
    echo "Installation failed.."
