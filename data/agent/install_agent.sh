@@ -25,17 +25,16 @@ else
   exit 1
 fi
 
-#Check User & Group
-
+# Verify that the user and group exist
 EXIST_USER=0
 UIDS=$(getent passwd | cut -d: -f1)
 for user in ${UIDS}
 do
-	group=$(getent group ${user} | cut -d: -f1)
-	if [[ "${user}" = "${agentUser}" && "${group}" = "${agentGroup}" ]]
-	then
-		EXIST_USER=1
-	fi
+  group=$(getent group ${user} | cut -d: -f1)
+  if [[ "${user}" = "${agentUser}" && "${group}" = "${agentGroup}" ]]
+  then
+    EXIST_USER=1
+  fi
 done
 
 
@@ -45,9 +44,7 @@ then
 	exit 1;
 fi
 
-
-# Silent Installation
-
+# Silent install
 chmod +x ./${flowInstaller}
 
 ./${flowInstaller} \
@@ -61,12 +58,11 @@ chmod +x ./${flowInstaller}
   --agentLocalPort "6800" \
   --agentPort "7800" \
 
-
 rm -rf ${flowInstaller}
 
 if [[ "${?}" -ne 0 ]]
 then
-   echo "Installation failed.."
+   echo "Agent installation failed.."
    exit 1
 fi
 
@@ -75,6 +71,5 @@ fi
 /opt/cloudbees/sda/bin/ectool deleteResource ${resourceName}
 /opt/cloudbees/sda/bin/ectool createResource ${resourceName} --hostName  ${agentIP} 
 /opt/cloudbees/sda/bin/ectool pingResource ${resourceName}
-
 
 tail -F /opt/cloudbees/sda/logs/agent/agent.log
