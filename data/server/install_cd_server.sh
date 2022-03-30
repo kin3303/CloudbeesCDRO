@@ -13,8 +13,8 @@ serverGroup="ubuntu"
 
 
 #download installer
-sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.0.153077/linux/CloudBeesFlow-x64-10.4.0.153077
-flowInstaller="CloudBeesFlow-x64-10.4.0.153077"
+sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.2.153852/linux/CloudBeesFlow-x64-10.4.2.153852
+flowInstaller="CloudBeesFlow-x64-10.4.2.153852"
 
 #check user & group exist
 EXIST_USER=0
