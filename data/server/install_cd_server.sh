@@ -50,6 +50,8 @@ sudo ./${flowInstaller} \
     --unixAgentGroup  "${serverUser}" \
     --unixAgentUser  "${serverGroup}"
 
+rm -rf ${flowInstaller}
+
 if [[ "${?}" -ne 0 ]]
 then
    echo "Installation failed.."
