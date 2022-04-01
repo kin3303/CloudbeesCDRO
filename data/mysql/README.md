@@ -27,7 +27,7 @@
 
 ```console
    $ /usr/local/mysql/bin/mysql -uroot -p 
-   > ALTER USER 'root'@'localhost' IDENTIFIED BY 'password!@#';
+   > ALTER USER 'root'@'%' IDENTIFIED BY 'password!@#';
    > CREATE DATABASE IF NOT EXISTS ecdb;
    > CREATE DATABASE IF NOT EXISTS ecdb_upgrade;
    > CREATE USER 'ecuser'@'%' IDENTIFIED BY 'password!@#';
