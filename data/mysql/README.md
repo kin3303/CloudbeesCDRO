@@ -19,8 +19,8 @@
    $ sudo su
    $ cd data/mysql
    $ chmod 777 install_mysql.sh
-   $ ./install_mysql.sh 
-   $ systemctl status mysql
+   $ ./install_mysql.sh  
+   $ password: [임시패스워드로 로그인]
 ```
 
 #### Step 3 > DB 설정
