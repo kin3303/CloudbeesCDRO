@@ -49,10 +49,5 @@ sudo bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/
 # create RSA files
 sudo bin/mysql_ssl_rsa_setup
 
-# service register and start
-sudo systemctl daemon-reload
-sudo service mysql start
-sudo systemctl enable mysql
-
 # mysql start & access
-#sudo /usr/local/mysql/bin/mysql -uroot -p
+sudo /usr/local/mysql/bin/mysql -uroot -p
