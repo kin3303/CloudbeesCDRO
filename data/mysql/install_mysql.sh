@@ -4,9 +4,6 @@
 sudo apt update
 sudo service mysql stop
 sudo killall mysqld
-sudo rm -rf /etc/mysql /var/lib/mysql
-sudo apt-get autoremove
-sudo apt-get autoclean
 sudo apt-get remove --purge mysql* 
 sudo rm -rf /usr/local/mysql/data
 sudo rm -rf /lib/systemd/system/mysql.service
