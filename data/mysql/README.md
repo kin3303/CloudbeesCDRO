@@ -48,7 +48,7 @@
 ### Step 5 > 재시작시 프로세스 실행
 
 ```console
-   $ sudo /usr/local/mysql/bin/mysqld_safe --user=mysql &
-   $ sudo /usr/local/mysql/bin/mysql -uroot -p'[신규패스워드]'
+   $ sudo su
+   $ /usr/local/mysql/bin/mysqld_safe --user=mysql & /usr/local/mysql/bin/mysql -uroot -p
 ```
 
