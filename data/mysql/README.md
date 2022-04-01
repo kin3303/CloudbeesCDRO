@@ -19,7 +19,7 @@
    $ sudo su
    $ cd data/mysql
    $ chmod 777 install_mysql.sh
-   $ ./install_mysql.sh   
+   $ ./install_mysql.sh
 ```
 
 #### Step 3 > DB 설정
@@ -34,7 +34,6 @@
    > GRANT ALL PRIVILEGES ON ecdb_upgrade.* TO 'ecuser'@'%';
    > FLUSH PRIVILEGES;
    > exit;
-   $ reboot
 ```
 
 #### Step 4 > DB 데일리 백업
