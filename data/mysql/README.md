@@ -30,7 +30,6 @@
    > CREATE USER 'ecuser'@'%' IDENTIFIED BY '[신규패스워드]';
    > CREATE DATABASE IF NOT EXISTS ecdb;
    > CREATE DATABASE IF NOT EXISTS ecdb_upgrade;
-   
    > GRANT ALL PRIVILEGES ON ecdb.* TO 'ecuser'@'%';
    > GRANT ALL PRIVILEGES ON ecdb_upgrade.* TO 'ecuser'@'%';
    > FLUSH PRIVILEGES;
@@ -45,3 +44,11 @@
    $ chmod 777 bkup_mysql.sh
    $ ./bkup_mysql.sh
 ```
+
+### Step 5 > 재시작시 프로세스 실행
+
+```console
+   $ sudo /usr/local/mysql/bin/mysqld_safe --user=mysql &
+   $ sudo /usr/local/mysql/bin/mysql -uroot -p'[신규패스워드]'
+```
+
