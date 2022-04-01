@@ -48,7 +48,6 @@
 ### Step 5 > 재시작시 프로세스 실행
 
 ```console
-   $ sudo su
-   $ /usr/local/mysql/bin/mysqld_safe --user=mysql & /usr/local/mysql/bin/mysql -uroot -p
+   $ /usr/local/mysql/bin/mysql -uroot -p
 ```
 
