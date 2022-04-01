@@ -36,9 +36,10 @@
    > exit;
 ```
 
-#### Step 4 > 서비스 실행 확인
+#### Step 4 > 서비스 실행 등록 확인
 
 ```console
+   $ reboot
    $ systemctl status mysqld
    $ /usr/local/mysql/bin/mysql -uroot -p
 ```
