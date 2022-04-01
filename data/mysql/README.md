@@ -19,13 +19,13 @@
    $ sudo su
    $ cd data/mysql
    $ chmod 777 install_mysql.sh
-   $ ./install_mysql.sh  
-   $ password: [임시패스워드로 로그인]
+   $ ./install_mysql.sh   
 ```
 
 #### Step 3 > DB 설정
 
 ```console
+   > /usr/local/mysql/bin/mysql -uroot -p 
    > ALTER USER 'root'@'localhost' IDENTIFIED BY '[신규패스워드]';
    > CREATE USER 'ecuser'@'%' IDENTIFIED BY '[신규패스워드]';
    > CREATE DATABASE IF NOT EXISTS ecdb;
@@ -34,6 +34,7 @@
    > GRANT ALL PRIVILEGES ON ecdb_upgrade.* TO 'ecuser'@'%';
    > FLUSH PRIVILEGES;
    > exit;
+   $ reboot
 ```
 
 #### Step 4 > DB 데일리 백업
