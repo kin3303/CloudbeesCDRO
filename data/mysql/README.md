@@ -45,7 +45,7 @@
    $ ./bkup_mysql.sh
 ```
 
-### Step 5 > 재시작시 서비스 실행
+#### Step 5 > 재시작시 서비스 실행
 
 ```console
    $ /usr/local/mysql/bin/mysql -uroot -p
