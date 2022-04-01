@@ -47,7 +47,7 @@ RUN  sed -i -e "s\basedir=\basedir=/usr/local/mysql\g" /etc/init.d/mysqld
 RUN  sed -i -e "s\datadir=\datadir=/usr/local/mysql/data\g" /etc/init.d/mysqld
 
 # mysql --initialize : installing
-sudo bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
+sudo bin/mysqld --initialize --user=mysql
 
 # create RSA files
 sudo bin/mysql_ssl_rsa_setup
