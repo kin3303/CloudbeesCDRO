@@ -39,6 +39,7 @@
 #### Step 4 > 서비스 실행 확인
 
 ```console
+   $ systemctl status mysqld
    $ /usr/local/mysql/bin/mysql -uroot -p
 ```
 
