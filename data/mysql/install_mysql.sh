@@ -50,4 +50,4 @@ sudo bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/
 sudo bin/mysql_ssl_rsa_setup
 
 # mysql start & access
-sudo /usr/local/mysql/bin/mysql -uroot -p
+sudo /usr/local/mysql/bin/mysqld_safe --user=mysql & sudo /usr/local/mysql/bin/mysql -uroot -p
