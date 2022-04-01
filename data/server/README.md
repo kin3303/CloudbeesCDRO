@@ -36,7 +36,7 @@
   Host name : <DB_SERVER_IP>
   Port : 3306
   Username : ecuser
-  Password : password!@#
+  Password : [DB 에서 설정한 패스워드]
 ```
 
 #### Step 4 > CD 서버에 License 임포트
