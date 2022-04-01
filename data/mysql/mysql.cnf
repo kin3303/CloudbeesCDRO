@@ -4,7 +4,6 @@ port  = 3306
 bind-address  = 0.0.0.0
 basedir=/usr/local/mysql
 datadir=/usr/local/mysql/data
-socket=/usr/local/mysql/lib/mysql.sock
 
 character-set-client-handshake=FALSE
 init_connect="SET collation_connection = utf8_general_ci"
