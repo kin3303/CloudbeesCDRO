@@ -26,7 +26,7 @@
 #### Step 3 > DB 설정
 
 ```console
-   > ALTER USER 'root'@'%' IDENTIFIED BY '[신규패스워드]';
+   > ALTER USER 'root'@'localhost' IDENTIFIED BY '[신규패스워드]';
    > CREATE USER 'ecuser'@'%' IDENTIFIED BY '[신규패스워드]';
    > CREATE DATABASE IF NOT EXISTS ecdb;
    > CREATE DATABASE IF NOT EXISTS ecdb_upgrade;
