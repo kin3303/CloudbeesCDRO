@@ -26,10 +26,11 @@
 #### Step 3 > DB 설정
 
 ```console
-   > ALTER USER 'root'@'%' IDENTIFIED BY 'password!@#';
+   > ALTER USER 'root'@'%' IDENTIFIED BY '[신규패스워드]';
+   > CREATE USER 'ecuser'@'%' IDENTIFIED BY '[신규패스워드]';
    > CREATE DATABASE IF NOT EXISTS ecdb;
    > CREATE DATABASE IF NOT EXISTS ecdb_upgrade;
-   > CREATE USER 'ecuser'@'%' IDENTIFIED BY 'password!@#';
+   
    > GRANT ALL PRIVILEGES ON ecdb.* TO 'ecuser'@'%';
    > GRANT ALL PRIVILEGES ON ecdb_upgrade.* TO 'ecuser'@'%';
    > FLUSH PRIVILEGES;
