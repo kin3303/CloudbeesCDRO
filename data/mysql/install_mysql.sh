@@ -6,11 +6,9 @@ sudo service mysql stop
 sudo killall mysqld
 sudo apt-get remove --purge mysql* 
 sudo rm -rf /usr/local/mysql/data
-sudo rm -rf /lib/systemd/system/mysql.service
 sudo rm -rf /etc/my.cnf
 
 # copy configuration file
-sudo cp ./mysql.service /usr/lib/systemd/system/mysql.service
 sudo cp ./mysql.cnf /etc/my.cnf
 
 #port allow
