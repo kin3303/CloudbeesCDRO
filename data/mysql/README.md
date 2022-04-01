@@ -26,7 +26,6 @@
 #### Step 3 > DB 설정
 
 ```console
-   $ /usr/local/mysql/bin/mysql -uroot -p 
    > ALTER USER 'root'@'%' IDENTIFIED BY 'password!@#';
    > CREATE DATABASE IF NOT EXISTS ecdb;
    > CREATE DATABASE IF NOT EXISTS ecdb_upgrade;
