@@ -43,8 +43,9 @@ sudo chmod 750 mysql-files
 
 # register service
 sudo cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
-RUN  sed -i -e "s\basedir=\basedir=/usr/local/mysql\g" /etc/init.d/mysqld
-RUN  sed -i -e "s\datadir=\datadir=/usr/local/mysql/data\g" /etc/init.d/mysqld
+sed -i -e "s\basedir=\basedir=/usr/local/mysql\g" /etc/init.d/mysqld
+sed -i -e "s\datadir=\datadir=/usr/local/mysql/data\g" /etc/init.d/mysqld
+systemctl enable mysqld
 
 # mysql --initialize : installing
 sudo bin/mysqld --initialize --user=mysql
