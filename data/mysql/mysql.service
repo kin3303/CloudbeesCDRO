@@ -12,7 +12,7 @@ user=mysql
 group=mysql
 
 # Start main service
-ExecStart=/usr/local/mysql/bin/mysqld_safe --user=mysql
+ExecStart=/usr/local/mysql/bin/mysql -uroot -p'password!@#'
 
 # Give up if ping dont get an answer
 TimeoutSec=300
