@@ -52,6 +52,5 @@ sudo bin/mysqld --initialize --user=mysql
 # create RSA files
 sudo bin/mysql_ssl_rsa_setup
 
-# mysql start & access
-sudo /usr/local/mysql/bin/mysqld_safe --user=mysql &
-sudo /usr/local/mysql/bin/mysql -uroot -p
+# mysql monitor start 
+sudo /usr/local/mysql/bin/mysqld_safe --user=mysql
