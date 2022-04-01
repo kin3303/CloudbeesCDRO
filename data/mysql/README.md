@@ -36,18 +36,18 @@
    > exit;
 ```
 
-#### Step 4 > DB 데일리 백업
+#### Step 4 > 서비스 실행 확인
+
+```console
+   $ /usr/local/mysql/bin/mysql -uroot -p
+```
+
+#### Step 5 > DB 백업 (필요시 사용)
 
 ```console
    $ sudo su
    $ cd data/mysql
    $ chmod 777 bkup_mysql.sh
    $ ./bkup_mysql.sh
-```
-
-#### Step 5 > 재시작시 서비스 실행확인
-
-```console
-   $ /usr/local/mysql/bin/mysql -uroot -p
 ```
 
