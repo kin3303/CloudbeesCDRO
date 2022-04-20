@@ -13,7 +13,7 @@
 ```
 
 
-#### Step 2 > DB 설치 (Term
+#### Step 2 > DB 설치
 
 ```console
    $ sudo su
@@ -25,7 +25,7 @@
    ...
 ```
 
-#### Step 3 > DB 설정
+#### Step 3 > DB 설정 (새로운 터미널 열어 설정)
 
 ```console
    > /usr/local/mysql/bin/mysql -uroot -p 
