@@ -13,19 +13,23 @@
 ```
 
 
-#### Step 2 > DB 설치
+#### Step 2 > DB 설치 (Term
 
 ```console
    $ sudo su
    $ cd data/mysql
    $ chmod 777 install_mysql.sh
    $ ./install_mysql.sh
+   ...
+   2022-04-20T06:49:43.493666Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 초기패스워드
+   ...
 ```
 
 #### Step 3 > DB 설정
 
 ```console
    > /usr/local/mysql/bin/mysql -uroot -p 
+   Enter password: 초기패스워드
    > ALTER USER 'root'@'localhost' IDENTIFIED BY '[신규패스워드]';
    > CREATE USER 'ecuser'@'%' IDENTIFIED BY '[신규패스워드]';
    > CREATE DATABASE IF NOT EXISTS ecdb;
