@@ -50,6 +50,8 @@
 
 #### Step 5 > DB 백업 (필요시 사용)
 
+mysqlbkup.cnf 의 password='password!@#' 구문을 실제 passord 로 변경한다.
+
 ```console
    $ sudo su
    $ cd data/mysql
