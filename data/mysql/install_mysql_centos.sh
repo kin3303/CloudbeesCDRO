@@ -9,7 +9,8 @@ sudo rm -rf /etc/my.cnf
 
 #install packages
 sudo yum update -y
-sudo yum -y install wget tar ncurses-devel firewalld libaio 
+sudo yum -y install wget tar ncurses-devel firewalld libaio  libncurses*
+
 sudo systemctl start firewalld
 
 # copy configuration file
