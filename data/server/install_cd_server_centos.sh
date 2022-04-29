@@ -25,7 +25,6 @@ sudo useradd --uid ${RUN_UID} --gid ${RUN_GID} --home-dir ${HOME_DIR} --shell /b
 serverUser="${RUN_USER}"
 serverGroup="${RUN_GROUP}"
 
-
 #download installer
 sudo yum update -y
 sudo yum -y install wget  
