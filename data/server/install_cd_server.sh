@@ -8,16 +8,10 @@ export LC_CTYPE=en_US.UTF-8
  
 sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
+# user & group
 serverUser="ubuntu"
 serverGroup="ubuntu"
 
-
-#download installer
-sudo apt install -y wget
-sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.2.153852/linux/CloudBeesFlow-x64-10.4.2.153852
-flowInstaller="CloudBeesFlow-x64-10.4.2.153852"
-
-#check user & group exist
 EXIST_USER=0
 UIDS=$(getent passwd | cut -d: -f1)
 for user in ${UIDS}
@@ -35,6 +29,22 @@ then
    echo "Please check if the user you entered is a valid user."
    exit 1;
 fi
+
+# port 
+sudo apt install -y ufw
+sudo ufw allow 8000/tcp
+sudo ufw allow 8443/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 7080/tcp
+sudo ufw allow 7443/tcp 
+sudo ufw allow 8200/tcp
+sudo ufw allow 8900/tcp
+  
+#download installer
+sudo apt install -y wget
+sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.2.153852/linux/CloudBeesFlow-x64-10.4.2.153852
+flowInstaller="CloudBeesFlow-x64-10.4.2.153852"
 
 #install cd server & web server
 sudo chmod +x ./${flowInstaller}
