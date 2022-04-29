@@ -21,9 +21,11 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
 # user & group
 sudo groupadd --gid ${RUN_GID} ${RUN_GROUP} && \
-sudo useradd --uid ${RUN_UID} --gid ${RUN_GID} --home-dir ${HOME_DIR} --shell /bin/bash ${RUN_USER}
+sudo useradd --uid ${RUN_UID} --gid ${RUN_GID} --home-dir ${HOME_DIR} --shell /bin/bash ${RUN_USER} && \
+
 serverUser="${RUN_USER}"
 serverGroup="${RUN_GROUP}"
+echo 'changeme' | passwd --stdin ${serverUser}
 
 #download installer
 sudo yum update -y
