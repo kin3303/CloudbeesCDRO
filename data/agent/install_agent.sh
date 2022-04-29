@@ -38,6 +38,9 @@ userPass="changeme"
 agentIP="$( hostname -I | awk '{print $1}')"
 resourceName=$agentIP
 
+# Locale Setting
+sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+
 # Firewall
 sudo apt install -y ufw
 sudo ufw allow 6800/tcp
