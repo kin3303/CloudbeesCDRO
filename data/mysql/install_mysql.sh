@@ -12,7 +12,7 @@ sudo rm -rf /etc/my.cnf
 sudo cp ./mysql.cnf /etc/my.cnf
 
 #port allow
-sudo apt install ufw
+sudo apt install ufw -y
 sudo ufw allow mysql
 
 # library install
@@ -23,6 +23,7 @@ sudo groupadd mysql
 sudo useradd -r -g mysql -s /bin/false mysql
 
 # mysql install file download & decompress
+sudo apt install wget -y
 cd /usr/local
 sudo wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.28-linux-glibc2.12-x86_64.tar.xz
 sudo tar xvf mysql-8.0.28-linux-glibc2.12-x86_64.tar.xz
