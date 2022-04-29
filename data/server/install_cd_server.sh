@@ -5,14 +5,15 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
-
-timedatectl set-timezone Asia/Seoul
+ 
+sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
 serverUser="ubuntu"
 serverGroup="ubuntu"
 
 
 #download installer
+sudo apt install -y wget
 sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.2.153852/linux/CloudBeesFlow-x64-10.4.2.153852
 flowInstaller="CloudBeesFlow-x64-10.4.2.153852"
 
