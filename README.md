@@ -1,6 +1,6 @@
 ## 테스트 환경
  
-- Tested with 24GB memory, 8 cores,  Ubuntu 16.04 LTS 
+- Tested with 24GB memory, 8 cores,  Ubuntu 20.04 LTS 
 - Tested Installer Version : CloudBees CD 10.4.2.153852 
 
 ## 설치
