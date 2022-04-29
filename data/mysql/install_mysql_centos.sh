@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#timezone
+sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+
 #cleaning
 sudo service mysql stop
 sudo killall mysqld
