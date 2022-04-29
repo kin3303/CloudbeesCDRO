@@ -1,22 +1,7 @@
 #!/bin/bash
 
+# Remote Server
 read -p 'Enter the cloudbees cd server ip: ' REMOTE_SERVER  
-
-export LANGUAGE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-
-agentUser="ubuntu" 
-agentGroup="ubuntu" 
-userAccount="admin" 
-userPass="changeme" 
-agentIP="$( hostname -I | awk '{print $1}')"
-resourceName=$agentIP
-
-sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.2.153852/linux/CloudBeesFlow-x64-10.4.2.153852
-flowInstaller="CloudBeesFlow-x64-10.4.2.153852"
-
 if [ ! -z "$REMOTE_SERVER" ]
 then
   remoteServer=$REMOTE_SERVER 
@@ -25,7 +10,9 @@ else
   exit 1
 fi
 
-# Verify that the user and group exist
+# User & Group
+agentUser="ubuntu" 
+agentGroup="ubuntu" 
 EXIST_USER=0
 UIDS=$(getent passwd | cut -d: -f1)
 for user in ${UIDS}
@@ -37,12 +24,29 @@ do
   fi
 done
 
-
 if [[ ${EXIST_USER} -eq 0 ]]
 then
 	echo "Please check if the user you entered is a valid user."
 	exit 1;
 fi
+
+# CloudbeesCDRO Account
+userAccount="admin" 
+userPass="changeme"
+
+# Resource Name
+agentIP="$( hostname -I | awk '{print $1}')"
+resourceName=$agentIP
+
+# Firewall
+sudo apt install -y ufw
+sudo ufw allow 6800/tcp
+sudo ufw allow 7800/tcp
+sudo ufw allow 61613/tcp
+
+# Download Installer
+sudo wget https://downloads.cloudbees.com/cloudbees-cd/Release_10.4/10.4.2.153852/linux/CloudBeesFlow-x64-10.4.2.153852
+flowInstaller="CloudBeesFlow-x64-10.4.2.153852"
 
 # Silent install
 chmod +x ./${flowInstaller}
