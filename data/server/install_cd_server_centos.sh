@@ -25,8 +25,7 @@ sudo firewall-cmd --zone=public --permanent --add-port=8900/tcp
 
 # user & group 
 serverUser="ubuntu"
-serverGroup="ubuntu"
-#check user & group exist
+serverGroup="ubuntu" 
 
 EXIST_USER=0
 UIDS=$(getent passwd | cut -d: -f1)
