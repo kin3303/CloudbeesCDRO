@@ -2,6 +2,7 @@
 ### Cloudbees CD 서버 설치 및 설정
 
 - Cloudbees CD 서버 설치 및 설정을 아래와 같이 진행한다.
+- Firewall 이나 User 설정은 설치시에 확인 필요하다.
 
 #### Step 1 > 소스 다운로드
 
